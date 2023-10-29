@@ -1,14 +1,34 @@
+import logging
 from django.conf import settings
-from django.contrib.auth import user_logged_in
+from django.contrib.auth import user_logged_in, user_login_failed
 from django.db.backends.signals import connection_created
 from django.dispatch import receiver
 
 from bookmarks.services import tasks
 
+logger = logging.getLogger(__name__)
+
+##FROM https://stackoverflow.com/questions/37618473/how-can-i-log-both-successful-and-failed-login-and-logout-attempts-in-django
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
 
 @receiver(user_logged_in)
 def user_logged_in(sender, request, user, **kwargs):
     tasks.schedule_bookmarks_without_snapshots(user)
+    ip = get_client_ip(request)
+    logger.info(f'Login success. username={user},  ip={ip}')
+
+@receiver(user_login_failed)
+def user_login_failed_recv(sender, credentials, request, **kwargs):
+    username=credentials.get('username')
+    ip = get_client_ip(request)
+    logger.warn(f'Login failed. username={username},  ip={ip}')
 
 
 @receiver(connection_created)
