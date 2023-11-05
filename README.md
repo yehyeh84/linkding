@@ -17,7 +17,7 @@
 - [Documentation](#documentation)
 - [Browser Extension](#browser-extension)
 - [Community](#community)
-- [Acknowledgements](#acknowledgements)
+- [Acknowledgements + Donations](#acknowledgements--donations)
 - [Development](#development)
 
 ##  Introduction
@@ -160,10 +160,10 @@ Instead of configuring header forwarding in your proxy, you can also configure t
 
 ### Managed Hosting Options
 
-Self-hosting web applications still requires a lot of technical know-how, and commitment to maintenance, with regard to keeping everything up-to-date and secure. This can be a huge entry barrier for people who are interested in self-hosting, but lack the technical knowledge to do so. This section is intended to provide alternatives in form of managed hosting solutions. Note that these options are usually commercial offerings, that require paying a fee for the convenience of being managed by another party. The technical knowledge required to make use of individual options is going to vary, and no guarantees can be made that every option is accessible for everyone. That being said, I hope this section helps in making the application accessible to a wider audience.
+Self-hosting web applications still requires a lot of technical know-how and commitment to maintenance, in order to keep everything up-to-date and secure. This section is intended to provide simple alternatives in form of managed hosting solutions.
 
 - [linkding on fly.io](https://github.com/fspoettel/linkding-on-fly) - Guide for hosting a linkding installation on [fly.io](https://fly.io). By [fspoettel](https://github.com/fspoettel)
-- [PikaPods.com](https://www.pikapods.com/) - Managed hosting for linkding, EU and US regions available. [1-click setup link](https://www.pikapods.com/pods?run=linkding)
+- [PikaPods.com](https://www.pikapods.com/) - Managed hosting for linkding, EU and US regions available. [1-click setup link](https://www.pikapods.com/pods?run=linkding) ([Disclosure](#pikapods))
 
 ## Documentation
 
@@ -190,7 +190,9 @@ The extension is open-source as well, and can be found [here](https://github.com
 This section lists community projects around using linkding, in alphabetical order. If you have a project that you want to share with the linkding community, feel free to submit a PR to add your project to this section.
 
 - [aiolinkding](https://github.com/bachya/aiolinkding) A Python3, async library to interact with the linkding REST API. By [bachya](https://github.com/bachya)
+- [feed2linkding](https://codeberg.org/strubbl/feed2linkding) A commandline utility to add all web feed item links to linkding via API call. By [Strubbl](https://github.com/Strubbl)
 - [Helm Chart](https://charts.pascaliske.dev/charts/linkding/) Helm Chart for deploying linkding inside a Kubernetes cluster. By [pascaliske](https://github.com/pascaliske)
+- [iOS Shortcut using API and Tagging](https://gist.github.com/andrewdolphin/a7dff49505e588d940bec55132fab8ad) An iOS shortcut using the Linkding API (no extra logins required) that pulls previously used tags and allows tagging at the time of link creation. 
 - [Linka!](https://github.com/cmsax/linka) Web app (also a PWA) for quickly searching & opening bookmarks in linkding, support multi keywords, exclude mode and other advance options. By [cmsax](https://github.com/cmsax)
 - [linkding-cli](https://github.com/bachya/linkding-cli) A command-line interface (CLI) to interact with the linkding REST API. Powered by [aiolinkding](https://github.com/bachya/aiolinkding). By [bachya](https://github.com/bachya)
 - [linkding-extension](https://github.com/jeroenpardon/linkding-extension) Chromium compatible extension that wraps the linkding bookmarklet. Tested with Chrome, Edge, Brave. By [jeroenpardon](https://github.com/jeroenpardon)
@@ -199,9 +201,21 @@ This section lists community projects around using linkding, in alphabetical ord
 - [Open all links bookmarklet](https://gist.github.com/ukcuddlyguy/336dd7339e6d35fc64a75ccfc9323c66) A browser bookmarklet to open all links on the current Linkding page in new tabs. By [ukcuddlyguy](https://github.com/ukcuddlyguy)
 - [Postman collection](https://gist.github.com/gingerbeardman/f0b42502f3bc9344e92ce63afd4360d3) a group of saved request templates for API testing. By [gingerbeardman](https://github.com/gingerbeardman)
 
-## Acknowledgements
+## Acknowledgements + Donations
 
-JetBrains provides an open-source license of [IntelliJ IDEA](https://www.jetbrains.com/idea/) for the development of linkding.
+### PikaPods
+
+[PikaPods](https://www.pikapods.com/) has a revenue sharing agreement with this project, sharing some of their revenue from hosting linkding instances. I do not intend to profit from this project financially, so I am in turn donating that revenue. Big thanks to PikaPods for making this possible. 
+
+See the table below for a list of donations.
+
+| Source                                | Description                                 | Amount  | Donated to                                                          |
+|---------------------------------------|---------------------------------------------|---------|---------------------------------------------------------------------|
+| [PikaPods](https://www.pikapods.com/) | Linkding hosting June 2022 - September 2023 | $163.50 | [Internet Archive](/docs/donations/2023-10-11-internet-archive.png) |
+
+### JetBrains
+
+JetBrains has previously provided an open-source license of [IntelliJ IDEA](https://www.jetbrains.com/idea/) for the development of linkding.
 
 ## Development
 
