@@ -43,13 +43,6 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
         },
-        'file': {
-                'class':'logging.handlers.RotatingFileHandler',
-                'filename': './data/log.txt',
-                'maxBytes': 1024*1024*5, # 5 MB
-                'backupCount': 5,
-                'formatter':'simple',
-        },
     },
     'root': {
         'handlers': ['console'],
@@ -58,7 +51,7 @@ LOGGING = {
     'loggers': {
         'bookmarks': {
             'level': 'INFO',
-            'handlers': ['console','file'],
+            'handlers': ['console'],
             'propagate': False,
         }
     }
